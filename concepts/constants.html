@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Constants</title>
+</head>
+
+<body>
+  <a href="../index.html">Home</a>
+  <script type="text/javascript">
+    const PI = 3.14;
+    console.log(PI);
+    
+    
+    //PI = 5;
+    //constants.html:12 Uncaught TypeError: Assignment to constant variable.
+  
+    //1. Understand the scope of const
+
+    if(1==1){
+      console.log(PI);
+      const RADIUS = 5;
+    }
+
+    //console.log(RADIUS);
+    //RADIUS is not defined
+    //const has block level access
+
+
+    //ES5 Style
+    Object.defineProperty(typeof global === "object" ? global : window, "PRI", {
+      value: 9.45,
+      enumerable: true,
+      writable: false,
+      configurable: false
+    });
+
+    console.log(PRI);
+
+  </script>
+</body>
+
+</html>

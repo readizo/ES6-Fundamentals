@@ -1,0 +1,22 @@
+{
+  "name": "es6-fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/readizo/ES6-Fundamentals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/readizo/ES6-Fundamentals/issues"
+  },
+  "homepage": "https://github.com/readizo/ES6-Fundamentals#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

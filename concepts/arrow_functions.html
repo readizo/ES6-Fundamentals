@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arrow Functions</title>
+</head>
+
+<body>
+  <a href="../index.html">Home</a>
+  <script type="text/javascript">
+
+    var displayName = function(){
+      return "Sandeep";
+
+    }
+
+    console.log(displayName());
+
+    let printName = () => {return "Sachin"}
+    console.log(printName());
+
+    let addNumbers = (num1, num2) => {
+      return num1+num2;
+    }
+
+    console.log(addNumbers(1,2));
+
+    let printString = str => {console.log(str);}
+    console.log(printString("just check string"));
+
+
+    console.log(this);
+    var display = function(){
+      console.log("inside function");
+      console.log(this);
+    }
+
+  var obj = new display();
+  var obj2 = new display();
+  display();
+
+  let newDisplay = () =>{
+    console.log(this);
+  }
+  
+  newDisplay();
+  var obj = new newDisplay();
+  
+    
+  
+  </script>
+
+</body>
+
+</html>

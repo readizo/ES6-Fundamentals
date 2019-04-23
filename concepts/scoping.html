@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scoping</title>
+</head>
+
+<body>
+  <a href="../index.html">Home</a>
+  <script type="text/javascript">
+   
+   var callbacks=[];
+   
+   /*
+   for(var i=0; i<3; i++){
+      callbacks[i] =  function(){
+        return i*2;
+      }
+   }
+   */
+
+   //console.log(callbacks[2]());
+   //result 3 as i is 3
+
+/*
+   for(var i=0; i<3; i++){
+    (function(i){
+      callbacks[i] = function(){
+        return i*2;
+      }
+    })(i)
+   }
+
+   console.log(callbacks[2]());
+   //result shared is blocked scoped using closure
+
+   */
+
+   for(let i=0; i<3; i++){
+     callbacks[i] = function(){ return i * 2};
+   }
+
+   //console.log(callbacks[2]());
+
+   //Blocked scope functions
+/*
+   (function(){
+      var foo = function(){return 1;}
+      console.log(foo());
+      if(foo()==1){
+        var foo = function(){return 2;}
+        console.log(foo());
+      }
+      console.log(foo());
+  
+    })();
+*/
+/*
+    (function(){
+      var foo = function(){return 1;}
+      console.log(foo());
+     (function(){
+        var foo = function(){return 2;}
+        console.log(foo());
+     })
+      console.log(foo());
+  
+    })();
+    //scoping using closers
+*/
+
+  {
+    let foo = function(){
+      return 1;
+    }
+    console.log(foo());
+      {
+        let foo = function(){
+          return 2;
+        }
+        console.log(foo())
+      }
+    
+    console.log(foo())
+  }
+
+  //TODO: lexical this
+
+  </script>
+</body>
+
+</html>

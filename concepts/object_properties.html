@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object Properties</title>
+</head>
+
+<body>
+  <a href="../index.html">Home</a>
+  <script type="text/javascript">
+   
+   var x=0, y=0;
+   var obj = {x,y};
+   console.log(obj);
+
+   var objectName = function(){
+     return "p i p e ";
+   }
+
+   var newObject = {};
+   newObject["abc" + objectName()] = "this is the value";
+   console.log(newObject);
+
+   var methodProperties = {
+     foo(){
+       console.log("hello");
+     },
+     boo(){
+       console.log("yellow");
+     }
+   }
+
+   console.log(methodProperties);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scoping</title>
+</head>
+
+<body>
+  <a href="../index.html">Home</a>
+  <script type="text/javascript">
+   
+   var customer = {name: "Sandeep", age: "32"};
+   var card = {pin: 12345, expiry: "27/10"};
+   var message = `
+    
+    Cusomter ${customer.name} aged ${customer.age} has a credit card
+    Please find below details
+    card pin number ${card.ping} with experiy ${card.expiry}
+
+   `
+
+   //http://127.0.0.1:8080/concepts/template_literals.html
+
+    var urlParams = {
+      subject: "concepts",
+      file: "template_literals.html"
+    }
+
+    console.log(`http://127.0.0.1:8080/${urlParams.subject}/${urlParams.file}`);
+   
+    console.log(message);
+
+
+
+    console.log(`abc\n`)
+    console.log(`abc\\n`);
+
+    //Direct support for safe binary and octal literals.
+
+    console.log(0b111110111 === 503);
+    console.log(0o767 === 503);
+
+    //TODO: unicodes
+    /* TODO
+
+    Enhanced Regular Expression
+    Regular Expression Sticky Matching
+    Keep the matching position sticky between matches and this way support efficient 
+    parsing of arbitrary long input strings, even with an arbitrary number of distinct regular expressions.
+
+    */
+
+  </script>
+</body>
+
+</html>
